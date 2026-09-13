@@ -5,9 +5,9 @@ poza Google Fonts i jednym klipem NASA (patrz niżej).
 
 ## Publikacja na GitHub Pages
 
-1. Wrzuć zawartość tego folderu do korzenia repozytorium (`index.html` musi być w korzeniu).
-2. Settings → Pages → Source: `Deploy from a branch`, branch `main`, katalog `/ (root)`.
-3. Strona pojawi się pod `https://<użytkownik>.github.io/<repo>/` (pierwszy build ~1 min).
+Strona stoi pod **https://nawrockipiotr.github.io/space-economy-conference-2027/**
+(repo `nawrockipiotr/space-economy-conference-2027`, Pages: branch `main`, katalog `/ (root)`).
+Każdy `git push` na `main` uruchamia nowy build, zwykle ~1 min.
 
 Plik `.nojekyll` wyłącza przetwarzanie Jekyllem — nie usuwaj go.
 
@@ -20,7 +20,7 @@ academic-committee.html     themes.html              submission.html
 previous-events.html        pdw-aom-2026.html        pdw-aom-2025.html
 space-drinks-2026.html      contact-team.html
 support.js                  runtime renderujący strony
-assets/video/               18 klipów tła (H.264, maks. 1280 px, bez audio)
+assets/video/               19 klipów tła (H.264, maks. 1280 px, bez audio)
 assets/vendor/              React 18.3.1, ReactDOM, Babel standalone (lokalnie)
 assets/committee/ team/ pdw2025/ pdw2026/ space-drinks/
 assets/favicon.svg  assets/og-image.jpg  assets/Space-Economy-Conference-2027-one-pager.pdf
@@ -31,16 +31,15 @@ Stronę można też otworzyć lokalnie — wystarczy kliknąć `index.html`.
 ## Co wymaga sieci
 
 - **Google Fonts** (Barlow Condensed, Archivo) — bez internetu zadziała fallback systemowy.
-- **Klip hero na stronie głównej** pobierany z `images-assets.nasa.gov` (4K, domena publiczna).
-  Jeśli ma działać offline i szybciej: pobierz plik, skompresuj tak jak pozostałe
-  i podmień `src` w `index.html` na lokalną ścieżkę.
+Klip hero na stronie głównej (NASA, domena publiczna) jest już lokalny:
+`assets/video/home-hero-nasa.mp4`.
 
 ## Open Graph
 
-`og:image` wskazuje na `./assets/og-image.jpg` ścieżką względną. LinkedIn i Facebook
-wymagają adresu bezwzględnego — po ustaleniu docelowego URL podmień we wszystkich
-plikach HTML na pełny adres, np.
-`https://<użytkownik>.github.io/<repo>/assets/og-image.jpg`.
+`og:image` i `og:url` wskazują na `https://nawrockipiotr.github.io/space-economy-conference-2027/`.
+Po przeniesieniu repozytorium na inne konto albo podpięciu własnej domeny trzeba
+podmienić ten adres we wszystkich 12 plikach HTML — inaczej podgląd linku
+na LinkedInie i Facebooku przestanie się ładować.
 
 ## Wideo
 
