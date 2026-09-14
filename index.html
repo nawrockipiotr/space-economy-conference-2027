@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Inaugural Space Economy Conference 2027 — London, 25–26 March</title>
-<meta name="description" content="A two-day developmental conference on the Space Economy, with selected paper presentations in strategy, entrepreneurship and innovation. London, 25–26 March 2027.">
-<link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+<meta name="description" content="A two-day developmental conference on the Space Economy: paper and poster presentations in strategy, entrepreneurship, innovation and organization. London, 25–26 March 2027.">
+<link rel="icon" type="image/png" href="./assets/favicon.png">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Space Economy Conference 2027">
 <meta property="og:title" content="Inaugural Space Economy Conference 2027 — London, 25–26 March">
-<meta property="og:description" content="A two-day developmental conference on the Space Economy, with selected paper presentations in strategy, entrepreneurship and innovation. London, 25–26 March 2027.">
+<meta property="og:description" content="A two-day developmental conference on the Space Economy: paper and poster presentations in strategy, entrepreneurship, innovation and organization. London, 25–26 March 2027.">
 <meta property="og:image" content="https://nawrockipiotr.github.io/space-economy-conference-2027/assets/og-image.jpg">
 <meta property="og:url" content="https://nawrockipiotr.github.io/space-economy-conference-2027/">
 <meta name="twitter:card" content="summary_large_image">
@@ -22,7 +22,7 @@
 <helmet>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Archivo:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Archivo:wght@300;400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 <style>
   html { scroll-behavior: smooth; }
   body { margin: 0; background: #00112A; color: #fff; -webkit-font-smoothing: antialiased; }
@@ -33,6 +33,19 @@
   @keyframes secCue { 0% { transform: translateY(0); opacity: .25; } 45% { transform: translateY(10px); opacity: 1; } 100% { transform: translateY(0); opacity: .25; } }
   @keyframes secMarquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
   header nav::-webkit-scrollbar { display: none; }
+  @keyframes secLogoIn { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+  header > a { animation: secLogoIn .7s cubic-bezier(.16,1,.3,1) both; }
+  header > a { position: relative; overflow: hidden; }
+  header > a img { transition: transform .6s cubic-bezier(.16,1,.3,1), filter .5s ease; }
+  header > a:hover img { transform: scale(1.045); filter: brightness(1.1); }
+  header > a::after { content: ''; position: absolute; top: -20%; bottom: -20%; left: -70%; width: 45%; background: linear-gradient(100deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.42) 50%, rgba(255,255,255,0) 100%); transform: skewX(-18deg); opacity: 0; pointer-events: none; }
+  header > a:hover::after { animation: secSheen .95s cubic-bezier(.3,0,.2,1) forwards; }
+  @keyframes secSheen { 0% { left: -70%; opacity: 0; } 15% { opacity: 1; } 100% { left: 120%; opacity: 0; } }
+  [data-menu-panel] a { transition: background .25s ease, padding-left .25s ease, color .25s ease; }
+  [data-menu-panel] a:hover { background: rgba(255,255,255,.09); padding-left: 14px !important; color: #fff; }
+  header [data-burger] { transition: background .3s ease, border-color .3s ease, color .3s ease; }
+  header [data-burger]:hover { background: rgba(255,255,255,.12); border-color: #fff; }
+  @media (max-width: 1480px) { header nav { display: none !important; } header [data-burger] { display: inline-flex !important; } }
   @keyframes secVidIn { from { opacity: 0; } to { opacity: 1; } }
   @keyframes secPulse { 0%,100% { opacity: .35; } 50% { opacity: 1; } }
   @keyframes secReveal { from { opacity: 0; transform: translateY(26px); } to { opacity: 1; transform: translateY(0); } }
@@ -42,9 +55,8 @@
 <div style="font-family:'Archivo',system-ui,sans-serif;background:#00112A">
 
   <header style="position:sticky;top:0;z-index:60;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;padding:16px clamp(20px,4vw,56px);background:rgba(0,13,32,.92);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.12)">
-    <a href="index.html" style="display:flex;flex-direction:column;line-height:1;color:#fff">
-      <span style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:22px;letter-spacing:.16em;text-transform:uppercase">Space Economy</span>
-      <span style="font-family:'Archivo',sans-serif;font-weight:400;font-size:10px;letter-spacing:.34em;text-transform:uppercase;color:#8FB3D9;margin-top:5px">Inaugural Conference 2027</span>
+    <a href="index.html" style="display:flex;align-items:center;gap:14px;color:#fff">
+      <img src="./assets/brand/logo.png" alt="The Inaugural Space Economy Conference" style="width:clamp(168px,19vw,238px);height:auto;display:block">
     </a>
     <nav style="display:flex;align-items:center;gap:clamp(12px,1.4vw,22px);flex-wrap:nowrap;justify-content:flex-start;overflow-x:auto;overflow-y:hidden;scrollbar-width:none;-ms-overflow-style:none;max-width:100%;padding-bottom:2px;margin-left:auto">
       <a href="conference-information.html" style="flex:none;white-space:nowrap;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#fff;opacity:.8;padding-bottom:3px" style-hover="opacity:1">Conference Information</a>
@@ -52,60 +64,79 @@
       <a href="professional-track.html" style="flex:none;white-space:nowrap;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#fff;opacity:.8;padding-bottom:3px" style-hover="opacity:1">Professional Track</a>
       <a href="academic-committee.html" style="flex:none;white-space:nowrap;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#fff;opacity:.8;padding-bottom:3px" style-hover="opacity:1">Academic Committee</a>
       <a href="themes.html" style="flex:none;white-space:nowrap;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#fff;opacity:.8;padding-bottom:3px" style-hover="opacity:1">Themes</a>
+      <a href="program.html" style="flex:none;white-space:nowrap;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#fff;opacity:.8;padding-bottom:3px" style-hover="opacity:1">Program</a>
       <a href="submission.html" style="flex:none;white-space:nowrap;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#fff;opacity:.8;padding-bottom:3px" style-hover="opacity:1">Submission</a>
       <a href="previous-events.html" style="flex:none;white-space:nowrap;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#fff;opacity:.8;padding-bottom:3px" style-hover="opacity:1">Previous Events</a>
       <a href="contact-team.html" style="flex:none;white-space:nowrap;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#fff;opacity:.8;padding-bottom:3px" style-hover="opacity:1">Contact / Team</a>
-      <a href="https://cmt3.research.microsoft.com/SEC2027" target="_blank" rel="noopener" style="flex:none;white-space:nowrap;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#fff;border:1px solid rgba(255,255,255,.55);padding:10px 18px" style-hover="background:#fff;color:#002147;border-color:#fff">Submit</a>
+      <a href="registration.html" style="flex:none;white-space:nowrap;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#fff;border:1px solid rgba(255,255,255,.55);padding:10px 18px" style-hover="background:#fff;color:#002147;border-color:#fff">Registration</a>
     </nav>
+    <button type="button" data-burger="1" aria-label="Open menu" aria-expanded="false" style="display:none;align-items:center;gap:10px;background:none;border:1px solid rgba(255,255,255,.45);color:#fff;font-family:inherit;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;padding:12px 16px;cursor:pointer">
+      <span style="display:flex;flex-direction:column;gap:3px"><span style="display:block;width:16px;height:1px;background:#fff"></span><span style="display:block;width:16px;height:1px;background:#fff"></span><span style="display:block;width:16px;height:1px;background:#fff"></span></span>Menu
+    </button>
   </header>
+  <div data-menu-panel="1" style="display:none;position:fixed;right:clamp(16px,4vw,56px);left:auto;width:min(320px,calc(100vw - 32px));box-sizing:border-box;z-index:59;background:#000C1E;border:1px solid rgba(255,255,255,.18);box-shadow:0 30px 60px rgba(0,0,0,.55);padding:6px 14px 14px;overflow:auto"></div>
 
   <section id="top" style="position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;background:#001126">
-    <video data-start="0" src="./assets/video/home-hero-nasa.mp4" muted="{{ true }}" playsInline="{{ true }}" preload="auto" style="opacity:0;animation:secVidIn 1.4s ease 1.6s both;image-rendering:auto;object-fit:cover;object-position:center 45%;position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;filter:saturate(1.14) contrast(1.12) brightness(1.03)"></video>
-    <div style="position:absolute;right:clamp(16px,4vw,44px);bottom:12px;z-index:3;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.82);text-align:right;max-width:60%">Video: NASA — Roman Space Telescope launch, ISO drone · public domain</div>
+    <video data-start="0" src="./assets/video/hero-nasa-roman-launch.mp4" poster="./assets/stills/hero-nasa-roman-launch.jpg" muted="{{ true }}" playsInline="{{ true }}" preload="auto" style="opacity:0;animation:secVidIn 1.4s ease 1.6s both;image-rendering:auto;object-fit:cover;object-position:center 45%;position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;filter:saturate(1.08) contrast(1.06)"></video>
+    <div style="position:absolute;right:clamp(16px,4vw,44px);bottom:12px;z-index:3;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.82);text-align:right;max-width:min(46%,420px)">Video: NASA — Roman Space Telescope launch, ISO drone · public domain</div>
     <div style="position:absolute;inset:0;z-index:0;background:linear-gradient(200deg,rgba(255,176,46,.18) 0%,rgba(226,88,34,.12) 42%,rgba(0,17,42,0) 100%);mix-blend-mode:soft-light;pointer-events:none"></div>
     <div style="position:absolute;inset:0;z-index:0;background:radial-gradient(120% 80% at 72% 24%,rgba(255,196,86,.16) 0%,rgba(255,138,32,.08) 38%,rgba(0,17,42,0) 72%);mix-blend-mode:screen;pointer-events:none"></div>
     <div style="position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(0,17,42,.5) 0%,rgba(0,17,42,.14) 30%,rgba(0,13,32,.72) 68%,rgba(0,13,32,.93) 100%);pointer-events:none"></div>
-    <div style="position:relative;z-index:2;padding:clamp(70px,10vh,130px) clamp(20px,5vw,80px) clamp(36px,6vh,72px);max-width:1500px">
+    <div style="position:relative;z-index:2;padding:clamp(70px,10vh,130px) clamp(20px,5vw,80px) clamp(74px,10vh,110px);max-width:1500px">
       <div data-reveal="up" style="display:flex;align-items:center;gap:14px;margin-bottom:22px">
         <span style="width:44px;height:1px;background:#A8C6E6"></span>
-        <span style="font-size:11px;letter-spacing:.34em;text-transform:uppercase;color:#A8C6E6">25–26 March 2027 · London</span>
+        <span style="font-size:11px;letter-spacing:.34em;text-transform:uppercase;color:#A8C6E6">25–26 March 2027 · London and/or Oxford</span>
       </div>
       <h1 data-reveal="up" style="margin:0;font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.01em;line-height:1.02;font-size:clamp(44px,8.4vw,148px);max-width:16ch">Inaugural Space Economy Conference 2027</h1>
       <p data-reveal="up" style="margin:26px 0 0;max-width:56ch;font-size:clamp(15px,1.15vw,18px);line-height:1.65;color:rgba(255,255,255,.82);text-wrap:pretty">A two-day developmental event focused on the Space Economy, featuring selected paper presentations in Strategy, Entrepreneurship, and Innovation.</p>
       <div data-reveal="up" style="display:flex;flex-wrap:wrap;gap:14px;margin-top:36px">
         <a href="https://cmt3.research.microsoft.com/SEC2027" target="_blank" rel="noopener" style="display:inline-block;padding:17px 34px;border:1px solid #fff;color:#fff;font-size:12px;letter-spacing:.24em;text-transform:uppercase;transition:background .35s ease,color .35s ease" style-hover="background:#fff;color:#002147">Submit an abstract</a>
         <a href="conference-information.html" style="display:inline-block;padding:17px 34px;border:1px solid rgba(255,255,255,.45);color:#fff;font-size:12px;letter-spacing:.24em;text-transform:uppercase;transition:background .35s ease,border-color .35s ease" style-hover="background:rgba(255,255,255,.12);border-color:#fff">Conference Information</a>
-        <a href="./assets/Space-Economy-Conference-2027-one-pager.pdf" download="Space-Economy-Conference-2027-one-pager.pdf" style="display:inline-block;padding:17px 34px;border:1px solid rgba(255,255,255,.45);color:#fff;font-size:12px;letter-spacing:.24em;text-transform:uppercase" style-hover="background:rgba(255,255,255,.12);border-color:#fff">One-pager (PDF)</a>
+        <a href="./assets/Space-Economy-Conference-2027-one-pager.pdf" download="Space-Economy-Conference-2027-one-pager.pdf" style="display:inline-block;padding:17px 34px;border:1px solid rgba(255,255,255,.45);color:#fff;font-size:12px;letter-spacing:.24em;text-transform:uppercase" style-hover="background:rgba(255,255,255,.12);border-color:#fff">Conference Poster (PDF)</a>
       </div>
       <div style="display:flex;flex-wrap:wrap;align-items:flex-end;gap:clamp(20px,4vw,64px);margin-top:clamp(34px,6vh,62px);padding-top:26px;border-top:1px solid rgba(255,255,255,.16)">
         <div>
           <div style="font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:#8FB3D9;margin-bottom:10px">Extended Abstract Submission Deadline</div>
-          <div style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(22px,2.4vw,34px);letter-spacing:.06em;text-transform:uppercase">30 October 2026</div>
+          <div style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(20px,2.1vw,30px);letter-spacing:.06em;text-transform:uppercase">30 October 2026</div>
+          <div style="display:flex;gap:clamp(14px,2vw,28px);margin-top:14px">
+            <div>
+              <div style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(24px,2.6vw,38px);line-height:1">{{ cdDays }}</div>
+              <div style="font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:#8FB3D9;margin-top:6px">Days</div>
+            </div>
+            <div>
+              <div style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(24px,2.6vw,38px);line-height:1">{{ cdHours }}</div>
+              <div style="font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:#8FB3D9;margin-top:6px">Hours</div>
+            </div>
+            <div>
+              <div style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(24px,2.6vw,38px);line-height:1">{{ cdMinutes }}</div>
+              <div style="font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:#8FB3D9;margin-top:6px">Minutes</div>
+            </div>
+          </div>
         </div>
-        <div style="display:flex;gap:clamp(14px,2vw,30px)">
-          <div>
-            <div style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(26px,3vw,44px);line-height:1">{{ cdDays }}</div>
-            <div style="font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:#8FB3D9;margin-top:6px">Days</div>
-          </div>
-          <div>
-            <div style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(26px,3vw,44px);line-height:1">{{ cdHours }}</div>
-            <div style="font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:#8FB3D9;margin-top:6px">Hours</div>
-          </div>
-          <div>
-            <div style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(26px,3vw,44px);line-height:1">{{ cdMinutes }}</div>
-            <div style="font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:#8FB3D9;margin-top:6px">Minutes</div>
+        <div>
+          <div style="font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:#8FB3D9;margin-bottom:10px">Conference Opens</div>
+          <div style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(20px,2.1vw,30px);letter-spacing:.06em;text-transform:uppercase">25 March 2027</div>
+          <div style="display:flex;gap:clamp(14px,2vw,28px);margin-top:14px">
+            <div>
+              <div style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(24px,2.6vw,38px);line-height:1">{{ ccDays }}</div>
+              <div style="font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:#8FB3D9;margin-top:6px">Days</div>
+            </div>
+            <div>
+              <div style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(24px,2.6vw,38px);line-height:1">{{ ccHours }}</div>
+              <div style="font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:#8FB3D9;margin-top:6px">Hours</div>
+            </div>
+            <div>
+              <div style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(24px,2.6vw,38px);line-height:1">{{ ccMinutes }}</div>
+              <div style="font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:#8FB3D9;margin-top:6px">Minutes</div>
+            </div>
           </div>
         </div>
         <div style="margin-left:auto;text-align:right;font-size:11px;line-height:1.9;letter-spacing:.06em;color:rgba(255,255,255,.7)">
-          Organized by Saïd Business School, University of Oxford<br>
           Local Host: TBC (UK)
         </div>
       </div>
     </div>
-        <div style="position:absolute;left:50%;bottom:14px;transform:translateX(-50%);z-index:3;display:flex;flex-direction:column;align-items:center;gap:8px;pointer-events:none">
-      <span style="font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:rgba(255,255,255,.55)">Scroll</span>
-      <span style="width:1px;height:34px;background:linear-gradient(180deg,rgba(255,255,255,.8),transparent);animation:secCue 2.6s ease-in-out infinite"></span>
-    </div>
+        
   </section>
 
   <div style="background:#002147;border-top:1px solid rgba(255,255,255,.12);border-bottom:1px solid rgba(255,255,255,.12);overflow:hidden;padding:14px 0">
@@ -139,7 +170,7 @@
               <div style="font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:#8FB3D9;margin-top:8px">Dates</div>
             </div>
             <div>
-              <div style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(34px,3.6vw,56px);line-height:1;color:#fff">London</div>
+              <div style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(28px,3vw,46px);line-height:1.05;color:#fff">London and/or Oxford</div>
               <div style="font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:#8FB3D9;margin-top:8px">Location: United Kingdom</div>
             </div>
             <div>
@@ -212,11 +243,11 @@
   </section>
 
   <section id="tracks" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:1px;background:rgba(255,255,255,.16)">
-    <div data-reveal="up" style="position:relative;min-height:min(88vh,760px);display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;background:#001A38">
-      <video data-start="2" src="./assets/video/home-track-academic.mp4" muted="{{ true }}" playsInline="{{ true }}" preload="auto" style="position:absolute;inset:0;width:100%;height:100%;opacity:0;animation:secVidIn 1.4s ease 1.6s both;image-rendering:auto;object-fit:cover;object-position:center 45%;z-index:1;pointer-events:none;filter:saturate(1.1) contrast(1.12) brightness(1.03)"></video>
+    <div data-reveal="up" style="position:relative;min-height:min(88vh,760px);display:flex;flex-direction:column;justify-content:flex-start;overflow:hidden;background:#001A38">
+      <video data-start="1" data-rate="0.45" src="./assets/video/academic-orbit.mp4" poster="./assets/stills/academic-orbit.jpg" muted="{{ true }}" playsInline="{{ true }}" preload="auto" style="position:absolute;inset:0;width:100%;height:100%;opacity:0;animation:secVidIn 1.4s ease 1.6s both;image-rendering:auto;object-fit:cover;object-position:22% 50%;z-index:1;pointer-events:none;filter:saturate(1.06) contrast(1.04) brightness(1.08)"></video>
     
-      <div style="position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(0,17,42,.22) 0%,rgba(0,17,42,.45) 55%,rgba(0,10,26,.9) 100%);pointer-events:none"></div>
-      <div style="position:relative;z-index:2;padding:clamp(28px,4vw,56px);background:linear-gradient(180deg,rgba(0,13,32,0) 0%,rgba(0,13,32,.35) 26%,rgba(0,13,32,.82) 62%,rgba(0,13,32,.94) 100%)">
+      <div style="position:absolute;inset:0;z-index:1;background:linear-gradient(0deg,rgba(0,17,42,.36) 0%,rgba(0,17,42,.58) 55%,rgba(0,10,26,.94) 100%);pointer-events:none"></div>
+      <div style="position:relative;z-index:2;padding:clamp(28px,4vw,56px);background:linear-gradient(0deg,rgba(0,13,32,0) 0%,rgba(0,13,32,.35) 26%,rgba(0,13,32,.82) 62%,rgba(0,13,32,.94) 100%)">
         <span style="font-size:11px;letter-spacing:.34em;text-transform:uppercase;color:#A8C6E6">Track one</span>
         <h2 style="margin:16px 0 0;font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;line-height:.95;font-size:clamp(34px,4.2vw,62px)">Academic track</h2>
         <p style="margin:18px 0 0;max-width:48ch;font-size:16px;line-height:1.7;color:rgba(255,255,255,.84);text-wrap:pretty">Invitations will be extended to authors of selected submissions and senior faculty discussants. In the first stage, please submit an extended abstract of no more than 500 words presenting a clear and compelling research idea related to the Space Economy.</p>
@@ -228,11 +259,11 @@
         <a href="academic-track.html" style="display:inline-block;padding:15px 30px;border:1px solid rgba(255,255,255,.6);color:#fff;font-size:11px;letter-spacing:.24em;text-transform:uppercase;transition:background .35s ease,color .35s ease" style-hover="background:#fff;color:#002147">Read the Academic Track</a>
               </div>
     </div>
-    <div data-reveal="up" style="position:relative;min-height:min(88vh,760px);display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;background:#001A38">
-      <video data-start="2" src="./assets/video/home-track-professional.mp4" muted="{{ true }}" playsInline="{{ true }}" preload="auto" style="position:absolute;inset:0;width:100%;height:100%;opacity:0;animation:secVidIn 1.4s ease 1.6s both;image-rendering:auto;object-fit:cover;object-position:center 45%;z-index:1;pointer-events:none;filter:saturate(1.1) contrast(1.12) brightness(1.03)"></video>
+    <div data-reveal="up" style="position:relative;min-height:min(88vh,760px);display:flex;flex-direction:column;justify-content:flex-start;overflow:hidden;background:#001A38">
+      <video data-start="1" data-rate="0.5" src="./assets/video/professional-track-ground-station.mp4" poster="./assets/stills/professional-track-ground-station.jpg" muted="{{ true }}" playsInline="{{ true }}" preload="auto" style="position:absolute;inset:0;width:100%;height:100%;opacity:0;animation:secVidIn 1.4s ease 1.6s both;image-rendering:auto;object-fit:cover;object-position:75% 50%;z-index:1;pointer-events:none;filter:saturate(1.06) contrast(1.05)"></video>
     
-      <div style="position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(0,17,42,.22) 0%,rgba(0,17,42,.45) 55%,rgba(0,10,26,.9) 100%);pointer-events:none"></div>
-      <div style="position:relative;z-index:2;padding:clamp(28px,4vw,56px);background:linear-gradient(180deg,rgba(0,13,32,0) 0%,rgba(0,13,32,.35) 26%,rgba(0,13,32,.82) 62%,rgba(0,13,32,.94) 100%)">
+      <div style="position:absolute;inset:0;z-index:1;background:linear-gradient(0deg,rgba(0,17,42,.36) 0%,rgba(0,17,42,.58) 55%,rgba(0,10,26,.94) 100%);pointer-events:none"></div>
+      <div style="position:relative;z-index:2;padding:clamp(28px,4vw,56px);background:linear-gradient(0deg,rgba(0,13,32,0) 0%,rgba(0,13,32,.35) 26%,rgba(0,13,32,.82) 62%,rgba(0,13,32,.94) 100%)">
         <span style="font-size:11px;letter-spacing:.34em;text-transform:uppercase;color:#A8C6E6">Track two</span>
         <h2 style="margin:16px 0 0;font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;line-height:.95;font-size:clamp(34px,4.2vw,62px)">Professional track</h2>
         <p style="margin:18px 0 0;max-width:48ch;font-size:16px;line-height:1.7;color:rgba(255,255,255,.84);text-wrap:pretty">The Professional Track creates opportunities for researchers to engage directly with industry professionals and practitioners working across the Space Economy. In the first stage, please submit a proposal abstract of no more than 500 words that identifies a specific managerial or organisational challenge in the space sector and presents a distinctive solution or approach to addressing it.</p>
@@ -247,26 +278,60 @@
     </div>
   </section>
 
-  <section style="position:relative;min-height:min(80vh,680px);display:flex;align-items:flex-end;overflow:hidden;background:#001126">
-    <video data-start="2" src="./assets/video/recognition.mp4" muted="{{ true }}" playsInline="{{ true }}" preload="auto" style="position:absolute;inset:0;width:100%;height:100%;opacity:0;animation:secVidIn 1.4s ease 1.6s both;image-rendering:auto;object-fit:cover;object-position:center 45%;z-index:1;pointer-events:none;filter:saturate(1.1) contrast(1.12) brightness(1.03)"></video>
-    <div style="position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(0,17,42,.88) 0%,rgba(0,17,42,.42) 58%,rgba(0,17,42,.1) 100%);pointer-events:none"></div>
-    <div data-reveal="up" style="position:relative;z-index:2;padding:clamp(40px,7vw,90px);max-width:1000px;display:flex;flex-wrap:wrap;align-items:center;gap:clamp(24px,3.5vw,52px)">
-      <img src="./assets/committee/christopher-tucci.jpg" alt="Professor Christopher Tucci" loading="lazy" style="width:clamp(150px,15vw,210px);aspect-ratio:1;object-fit:cover;object-position:center 18%;border:1px solid rgba(255,255,255,.22);flex:none;transition:transform .55s cubic-bezier(.16,1,.3,1),box-shadow .55s ease,border-color .55s ease" style-hover="transform:translateY(-10px);box-shadow:0 30px 60px rgba(0,0,0,.55);border-color:rgba(168,198,230,.7)">
-      <div style="flex:1 1 min(100%,340px)">
-        <span style="font-size:11px;letter-spacing:.34em;text-transform:uppercase;color:#A8C6E6">Community Recognition</span>
-      <h2 style="margin:18px 0 0;font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;line-height:.95;font-size:clamp(30px,3.6vw,54px)">Honoring Professor Christopher Tucci</h2>
-        <p style="margin:20px 0 0;font-size:16px;line-height:1.75;color:rgba(255,255,255,.84);text-wrap:pretty">The inaugural conference will also include a community recognition moment honoring Professor Christopher Tucci for his lifelong contributions and service to the management research community.</p>
+  <section style="padding:clamp(44px,7vh,84px) clamp(20px,5vw,80px);background:#001A38;border-top:1px solid rgba(255,255,255,.12);border-bottom:1px solid rgba(255,255,255,.12)">
+    <div style="max-width:1400px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:clamp(26px,4vw,64px);align-items:start">
+      <div data-reveal="up">
+        <span style="font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:#8FB3D9">Alongside the conference</span>
+        <h2 style="margin:12px 0 0;font-family:'Barlow Condensed',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.05em;line-height:1.05;font-size:clamp(24px,2.4vw,34px)">Community Recognition</h2>
+        <div style="display:flex;gap:20px;align-items:flex-start;margin-top:18px;flex-wrap:wrap">
+          <img src="./assets/committee/christopher-tucci.jpg" alt="Professor Christopher Tucci" loading="lazy" style="width:clamp(140px,12vw,170px);aspect-ratio:1;object-fit:cover;object-position:center 18%;border:1px solid rgba(255,255,255,.22);flex:none;filter:grayscale(.15) contrast(1.03);transition:transform .55s cubic-bezier(.16,1,.3,1),box-shadow .55s ease,border-color .55s ease" style-hover="transform:translateY(-10px);box-shadow:0 30px 60px rgba(0,0,0,.55);border-color:rgba(168,198,230,.7)">
+          <p style="margin:0;flex:1 1 min(100%,260px);font-size:15px;line-height:1.7;color:rgba(255,255,255,.72);text-wrap:pretty">Running alongside the conference, the community will mark the contributions of <a href="community-recognition.html">Professor Christopher Tucci</a> to management research. The recognition programme is organised separately from the conference.</p>
+        </div>
+        <a href="community-recognition.html" style="display:inline-flex;align-items:center;gap:12px;margin-top:22px;padding:15px 28px;border:1px solid rgba(255,255,255,.45);color:#fff;font-size:11px;letter-spacing:.22em;text-transform:uppercase" style-hover="background:#fff;color:#002147;border-color:#fff">Recognition programme <span>→</span></a>
       </div>
+      <div data-reveal="up">
+        <div style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#8FB3D9;margin-bottom:6px">
+          <span>17:00–19:00 · Day 1</span><span>Approximately 30 minutes per session</span>
+        </div>
+        <div style="display:flex;flex-direction:column">
+          <div style="display:grid;grid-template-columns:auto 1fr auto;gap:8px 20px;align-items:baseline;padding:14px 0;border-top:1px solid rgba(255,255,255,.16)">
+            <span style="font-size:11px;letter-spacing:.16em;color:#5E87B5">01</span>
+            <span style="font-family:'Barlow Condensed',sans-serif;font-size:21px;letter-spacing:.05em;text-transform:uppercase;line-height:1.15">Crowdsourcing</span>
+            <span style="font-size:12px;letter-spacing:.08em;color:rgba(255,255,255,.55);white-space:nowrap">~30 min</span>
           </div>
+          <div style="display:grid;grid-template-columns:auto 1fr auto;gap:8px 20px;align-items:baseline;padding:14px 0;border-top:1px solid rgba(255,255,255,.16)">
+            <span style="font-size:11px;letter-spacing:.16em;color:#5E87B5">02</span>
+            <span style="font-family:'Barlow Condensed',sans-serif;font-size:21px;letter-spacing:.05em;text-transform:uppercase;line-height:1.15">Innovation &amp; open innovation</span>
+            <span style="font-size:12px;letter-spacing:.08em;color:rgba(255,255,255,.55);white-space:nowrap">~30 min</span>
+          </div>
+          <div style="display:grid;grid-template-columns:auto 1fr auto;gap:8px 20px;align-items:baseline;padding:14px 0;border-top:1px solid rgba(255,255,255,.16)">
+            <span style="font-size:11px;letter-spacing:.16em;color:#5E87B5">03</span>
+            <span style="font-family:'Barlow Condensed',sans-serif;font-size:21px;letter-spacing:.05em;text-transform:uppercase;line-height:1.15">Artificial intelligence</span>
+            <span style="font-size:12px;letter-spacing:.08em;color:rgba(255,255,255,.55);white-space:nowrap">~30 min</span>
+          </div>
+          <div style="display:grid;grid-template-columns:auto 1fr auto;gap:8px 20px;align-items:baseline;padding:14px 0;border-top:1px solid rgba(255,255,255,.16)">
+            <span style="font-size:11px;letter-spacing:.16em;color:#5E87B5">04</span>
+            <span style="font-family:'Barlow Condensed',sans-serif;font-size:21px;letter-spacing:.05em;text-transform:uppercase;line-height:1.15">Space</span>
+            <span style="font-size:12px;letter-spacing:.08em;color:rgba(255,255,255,.55);white-space:nowrap">~30 min</span>
+          </div>
+          <div style="display:grid;grid-template-columns:auto 1fr auto;gap:8px 20px;align-items:baseline;padding:14px 0;border-top:1px solid rgba(255,255,255,.16)">
+            <span style="font-size:11px;letter-spacing:.16em;color:#5E87B5">—</span>
+            <span style="font-family:'Barlow Condensed',sans-serif;font-size:21px;letter-spacing:.05em;text-transform:uppercase;line-height:1.15">Conference dinner · conversation with Chris</span>
+            <span style="font-size:12px;letter-spacing:.08em;color:rgba(255,255,255,.55);white-space:nowrap">From ~19:30</span>
+          </div>
+        </div>
+        <p style="margin:16px 0 0;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5)">Provisional programme · speakers and final timings to be announced</p>
+      </div>
+    </div>
   </section>
 
   <section id="submit" style="padding:clamp(70px,12vh,150px) clamp(20px,5vw,80px);background:#002147;border-top:1px solid rgba(255,255,255,.14)">
     <div style="max-width:1000px;margin:0 auto;text-align:center">
       <h2 data-reveal="up" style="margin:0;font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;line-height:.94;font-size:clamp(36px,6vw,96px)">Submit an Abstract</h2>
-      <p data-reveal="up" style="margin:22px auto 0;max-width:58ch;font-size:16px;line-height:1.75;color:rgba(255,255,255,.8);text-wrap:pretty">We invite extended abstracts on the Space Economy across strategy, innovation, entrepreneurship, and organization. Stage one, submit an extended abstract. Selected authors will be invited to submit a full paper for developmental presentation at the conference in spring 2027 in London.</p>
+      <p data-reveal="up" style="margin:22px auto 0;max-width:58ch;font-size:16px;line-height:1.75;color:rgba(255,255,255,.8);text-wrap:pretty">We invite both management scholars and Space Economy professionals to submit to the conference. In Stage 1, participants are invited to submit an extended abstract. Selected authors will then be invited to present their work at the conference and receive developmental feedback from our academic and professional committees.</p>
       <div data-reveal="up" style="display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:38px">
         <a href="https://cmt3.research.microsoft.com/SEC2027" target="_blank" rel="noopener" style="display:inline-block;padding:18px 38px;background:#fff;color:#002147;font-size:12px;letter-spacing:.24em;text-transform:uppercase;transition:opacity .35s ease" style-hover="opacity:.86">Submit an Abstract</a>
-        <a href="./assets/Space-Economy-Conference-2027-one-pager.pdf" download="Space-Economy-Conference-2027-one-pager.pdf" style="display:inline-block;padding:18px 38px;border:1px solid rgba(255,255,255,.5);color:#fff;font-size:12px;letter-spacing:.24em;text-transform:uppercase;transition:background .35s ease,border-color .35s ease" style-hover="background:rgba(255,255,255,.12);border-color:#fff">Download the one-pager (PDF)</a>
+        <a href="./assets/Space-Economy-Conference-2027-one-pager.pdf" download="Space-Economy-Conference-2027-one-pager.pdf" style="display:inline-block;padding:18px 38px;border:1px solid rgba(255,255,255,.5);color:#fff;font-size:12px;letter-spacing:.24em;text-transform:uppercase;transition:background .35s ease,border-color .35s ease" style-hover="background:rgba(255,255,255,.12);border-color:#fff">Conference Poster (PDF)</a>
         <a href="mailto:mehdi.montakhabi@said.oxford.edu" style="display:inline-block;padding:18px 38px;border:1px solid rgba(255,255,255,.5);color:#fff;font-size:12px;letter-spacing:.24em;text-transform:uppercase;transition:background .35s ease,border-color .35s ease" style-hover="background:rgba(255,255,255,.12);border-color:#fff">Enquiries</a>
       </div>
     </div>
@@ -298,7 +363,7 @@
       <div>
         <div style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:22px;letter-spacing:.16em;text-transform:uppercase">Space Economy</div>
         <div style="font-size:10px;letter-spacing:.34em;text-transform:uppercase;color:#7FA0C4;margin-top:6px">Inaugural Conference 2027</div>
-        <p style="margin:20px 0 0;font-size:13px;line-height:1.8;color:rgba(255,255,255,.6);max-width:34ch">Organized by Saïd Business School, University of Oxford. Location: London, United Kingdom. Local Host: TBC (UK).</p>
+        <a href="https://forms.gle/gdWQz79d73MipmeZA" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:12px;margin-top:20px;padding:14px 22px;border:1px solid rgba(255,255,255,.45);color:#fff;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase" style-hover="background:#fff;color:#002147;border-color:#fff">Subscribe to newsletter <span>→</span></a>
       </div>
       <div>
         <div style="font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:#7FA0C4;margin-bottom:16px">Conference</div>
@@ -308,9 +373,12 @@
           <a href="professional-track.html">Professional Track</a>
           <a href="themes.html">Themes</a>
           <a href="academic-committee.html">Academic Committee</a>
+          <a href="program.html">Program</a>
           <a href="submission.html">Submission</a>
+          <a href="registration.html">Registration</a>
+          <a href="community-recognition.html">Community Recognition</a>
           <a href="contact-team.html">Contact / Team</a>
-          <a href="./assets/Space-Economy-Conference-2027-one-pager.pdf" download="Space-Economy-Conference-2027-one-pager.pdf">One-pager (PDF)</a>
+          <a href="./assets/Space-Economy-Conference-2027-one-pager.pdf" download="Space-Economy-Conference-2027-one-pager.pdf">Conference Poster (PDF)</a>
         </div>
       </div>
       <div>
@@ -324,11 +392,11 @@
       <div>
         <div style="font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:#7FA0C4;margin-bottom:16px">Contact</div>
         <a href="mailto:mehdi.montakhabi@said.oxford.edu" style="font-size:14px;word-break:break-word">mehdi.montakhabi@said.oxford.edu</a>
-        <p style="margin:18px 0 0;font-size:12px;line-height:1.7;color:rgba(255,255,255,.45)">Peer review is managed with the Microsoft CMT service, provided free of charge by Microsoft, which bears all associated expenses.</p>
+        <p style="margin:18px 0 0;font-size:12px;line-height:1.7;color:rgba(255,255,255,.45)">The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.</p>
       </div>
     </div>
     <div style="max-width:1400px;margin:40px auto 0;padding-top:22px;border-top:1px solid rgba(255,255,255,.12);display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.45)">
-      <span>25–26 March 2027 · London</span>
+      <span>25–26 March 2027 · London and/or Oxford</span>
       <span>Space Economy Community</span>
       <span style="flex:1 1 100%;color:rgba(255,255,255,.38);letter-spacing:.1em">Video and imagery: Pexels · NASA (public domain)</span>
     </div>
@@ -338,7 +406,7 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
-  state = { cd: { d: '—', h: '—', m: '—' } };
+  state = { cd: { d: '—', h: '—', m: '—' }, cc: { d: '—', h: '—', m: '—' } };
 
   constructor(props) {
     super(props);
@@ -359,15 +427,95 @@ class Component extends DCLogic {
       el.style.transform = 'translateY(26px)';
       io.observe(el);
     });
+    // fail-open: if the observer never fires (unusual scroll roots, embedded views), reveal everything anyway
+    setTimeout(() => revealEls.forEach((el) => { if (el.style.opacity === '0') show(el); }), 1600);
 
     this.tick();
     this.timer = setInterval(() => this.tick(), 30000);
 
 
+
+    const burger = document.querySelector('[data-burger]');
+    const panel = document.querySelector('[data-menu-panel]');
+    if (burger && panel && !burger.__scInit) {
+      burger.__scInit = true;
+      const nav = document.querySelector('header nav');
+      const header = document.querySelector('header');
+      // move the panel out of the React tree so a re-render cannot close or empty it
+      if (panel.parentNode !== document.body) document.body.appendChild(panel);
+      panel.style.transition = 'max-height .38s cubic-bezier(.16,1,.3,1), opacity .3s ease';
+      const close = () => {
+        if (panel.style.display !== 'block') return;
+        panel.style.overflow = 'hidden';
+        clearTimeout(panel.__o);
+        panel.style.maxHeight = '0px';
+        panel.style.opacity = '0';
+        burger.setAttribute('aria-expanded', 'false');
+        clearTimeout(panel.__t);
+        panel.__t = setTimeout(() => { panel.style.display = 'none'; }, 380);
+      };
+      const build = () => {
+        panel.innerHTML = '';
+        [...nav.children].forEach((a) => {
+          const c = a.cloneNode(true);
+          c.removeAttribute('class');
+          c.setAttribute('style', 'display:block;padding:16px 12px;border-bottom:1px solid rgba(255,255,255,.12);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#fff;text-align:left;border-radius:2px');
+          panel.appendChild(c);
+        });
+      };
+      const place = () => { panel.style.top = Math.round(header.getBoundingClientRect().bottom + 8) + 'px'; };
+      const open = () => {
+        if (panel.style.display === 'block') return;
+        build();
+        place();
+        clearTimeout(panel.__t);
+        panel.style.display = 'block';
+        panel.style.overflow = 'hidden';
+        panel.style.maxHeight = '0px';
+        panel.style.opacity = '0';
+        void panel.offsetHeight;
+        const topPx = parseFloat(panel.style.top) || 0;
+        const budget = Math.min(panel.scrollHeight + 24, window.innerHeight - topPx - 16);
+        panel.style.maxHeight = budget + 'px';
+        panel.style.opacity = '1';
+        clearTimeout(panel.__o);
+        panel.__o = setTimeout(() => {
+          if (panel.style.display !== 'block') return;
+          // fail-safe: if the transition never ran (throttled frames), land on the open state directly
+          if (parseFloat(getComputedStyle(panel).maxHeight) < budget - 1 || parseFloat(getComputedStyle(panel).opacity) < 1) {
+            panel.style.transition = 'none';
+            panel.style.maxHeight = budget + 'px';
+            panel.style.opacity = '1';
+            void panel.offsetHeight;
+            panel.style.transition = 'max-height .38s cubic-bezier(.16,1,.3,1), opacity .3s ease';
+          }
+          panel.style.overflow = 'auto';
+        }, 420);
+        burger.setAttribute('aria-expanded', 'true');
+      };
+      const hoverClose = () => { clearTimeout(panel.__h); panel.__h = setTimeout(close, 260); };
+      const cancelClose = () => clearTimeout(panel.__h);
+      burger.addEventListener('click', () => { if (panel.style.display === 'block') close(); else open(); });
+      burger.addEventListener('mouseenter', () => { cancelClose(); open(); });
+      burger.addEventListener('mouseleave', hoverClose);
+      panel.addEventListener('mouseenter', cancelClose);
+      panel.addEventListener('mouseleave', hoverClose);
+      panel.addEventListener('click', (e) => { if (e.target.closest('a')) close(); });
+      window.addEventListener('scroll', () => { if (panel.style.display === 'block') place(); }, { passive: true });
+      window.addEventListener('resize', close);
+      document.addEventListener('click', (e) => {
+        if (panel.style.display !== 'block') return;
+        if (panel.contains(e.target) || burger.contains(e.target)) return;
+        close();
+      });
+    }
+
     this.initVideo = (v) => {
       if (v.__scInit) return;
       v.__scInit = true;
       v.muted = true; v.loop = false; v.playsInline = true; v.preload = 'auto'; v.autoplay = true;
+      const rate = parseFloat(v.getAttribute('data-rate'));
+      if (rate) { v.playbackRate = rate; v.addEventListener('loadeddata', () => { v.playbackRate = rate; }); }
 
       const start = parseFloat(v.getAttribute('data-start')) || 0;
       const end = parseFloat(v.getAttribute('data-end')) || 0;
@@ -420,19 +568,26 @@ class Component extends DCLogic {
   }
 
   tick() {
-    const ms = new Date('2026-10-30T23:59:59Z') - new Date();
-    if (ms <= 0) { this.setState({ cd: { d: '0', h: '0', m: '0' } }); return; }
-    const d = Math.floor(ms / 86400000);
-    const h = Math.floor((ms % 86400000) / 3600000);
-    const m = Math.floor((ms % 3600000) / 60000);
-    this.setState({ cd: { d: String(d), h: String(h).padStart(2, '0'), m: String(m).padStart(2, '0') } });
+    const parts = (target) => {
+      const ms = new Date(target) - new Date();
+      if (ms <= 0) return { d: '0', h: '00', m: '00' };
+      return {
+        d: String(Math.floor(ms / 86400000)),
+        h: String(Math.floor((ms % 86400000) / 3600000)).padStart(2, '0'),
+        m: String(Math.floor((ms % 3600000) / 60000)).padStart(2, '0')
+      };
+    };
+    this.setState({ cd: parts('2026-10-30T23:59:59Z'), cc: parts('2027-03-25T09:00:00Z') });
   }
 
   renderVals() {
     return {
       cdDays: this.state.cd.d,
       cdHours: this.state.cd.h,
-      cdMinutes: this.state.cd.m
+      cdMinutes: this.state.cd.m,
+      ccDays: this.state.cc.d,
+      ccHours: this.state.cc.h,
+      ccMinutes: this.state.cc.m
     };
   }
 }
