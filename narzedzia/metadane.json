@@ -1,0 +1,87 @@
+{
+  "_komentarz": "Tytuly i opisy stron. Klucz = nazwa pliku po przemianowaniu. Zmieniaj swobodnie. Strony spoza tej listy dostana tytul wyprowadzony z nazwy pliku i opis domyslny, a skrypt o tym ostrzeze.",
+  "_adres_strony": "https://www.spaceeconomycommunity.org",
+  "_komentarz_adres": "Adres docelowy strony. Uzywany w Open Graph. Gdy strona stoi na hostingu wspoldzielonym (Namecheap), plik CNAME nie jest potrzebny — patrz _tworz_cname.",
+  "_tworz_cname": false,
+  "_komentarz_cname": "CNAME to plik wylacznie dla GitHub Pages. Przy hostingu w Namecheap zostaw false. Gdyby strona wracala na GitHub Pages — ustaw true.",
+  "_nazwa_serwisu": "Space Economy Conference 2027",
+  "_opis_domyslny": "The inaugural Space Economy Conference — London, 25-26 March 2027.",
+  "_zasoby_stale": {
+    "_komentarz": "Pliki z narzedzia/zasoby/ wgrywane na strone po kazdym eksporcie, bo eksport przywraca stare wersje. Gdy Claude Design bedzie juz mial wlasciwe logo, usun z tej listy 'brand/logo.png'.",
+    "favicon.png": "assets/favicon.png",
+    "og-image.jpg": "assets/og-image.jpg",
+    "logo.png": "assets/brand/logo.png"
+  },
+  "_szerokosc_logo": "clamp(190px,22vw,280px)",
+  "_maks_szerokosc_portretu": 800,
+  "_link_powrotny": {
+    "_komentarz": "Strona o Chrisie Tuccim jest zrobiona poza Claude Design i nie ma wyjscia na strone konferencji. Skrypt dokleja jej link powrotny w gornym pasku. Ustaw na null, gdyby link pojawil sie w samej stronie.",
+    "strona": "community-recognition.html",
+    "href": "index.html",
+    "etykieta": "Space Economy Conference 2027",
+    "etykieta_krotka": "Conference"
+  },
+  "strony": {
+    "index.html": {
+      "tytul": "Inaugural Space Economy Conference 2027 — London, 25–26 March",
+      "opis": "A two-day developmental conference on the Space Economy: paper and poster presentations in strategy, entrepreneurship, innovation and organization. London, 25–26 March 2027."
+    },
+    "conference-information.html": {
+      "tytul": "Conference Information | Space Economy Conference 2027",
+      "opis": "Dates, location, host and deadlines for the inaugural Space Economy Conference — 25–26 March 2027, London and/or Oxford."
+    },
+    "academic-track.html": {
+      "tytul": "Academic Track | Space Economy Conference 2027",
+      "opis": "Selected paper presentations in strategy, entrepreneurship and innovation, with developmental feedback from senior faculty discussants."
+    },
+    "professional-track.html": {
+      "tytul": "Professional Track | Space Economy Conference 2027",
+      "opis": "Direct engagement between researchers and industry professionals working across the Space Economy."
+    },
+    "academic-committee.html": {
+      "tytul": "Academic Committee | Space Economy Conference 2027",
+      "opis": "Senior scholars serving as speakers, panelists and discussants at the inaugural Space Economy Conference 2027."
+    },
+    "themes.html": {
+      "tytul": "Themes | Space Economy Conference 2027",
+      "opis": "Fourteen submission areas, from business models and ecosystems to governance, methods and international space business."
+    },
+    "program.html": {
+      "tytul": "Program | Space Economy Conference 2027",
+      "opis": "The two-day programme for 25–26 March 2027 — sessions, panels and keynotes — will be published here once the review process is complete."
+    },
+    "submission.html": {
+      "tytul": "Submission | Space Economy Conference 2027",
+      "opis": "Two-stage process: an extended abstract first, then a full paper or presentation slides by invitation. Deadline 30 October 2026."
+    },
+    "registration.html": {
+      "tytul": "Registration | Space Economy Conference 2027",
+      "opis": "Registration for the inaugural conference opens in due course; details and fees will be published here. Abstract submission runs separately."
+    },
+    "previous-events.html": {
+      "tytul": "Previous Events | Space Economy Conference 2027",
+      "opis": "The 2025 and 2026 Space Economy PDWs at the Academy of Management laid the foundation for the 2027 conference."
+    },
+    "pdw-aom-2026.html": {
+      "tytul": "Space Economy PDW at AOM 2026 | Space Economy Conference 2027",
+      "opis": "Consolidating a Management Research Agenda — the 86th Annual Meeting of the Academy of Management, Philadelphia, 2026."
+    },
+    "pdw-aom-2025.html": {
+      "tytul": "Space Economy PDW at AOM 2025 | Space Economy Conference 2027",
+      "opis": "The launch of a dedicated management research conversation on the Space Economy — 85th Annual Meeting of the Academy of Management."
+    },
+    "space-drinks-2026.html": {
+      "tytul": "Space Drinks at AOM 2026 | Space Economy Conference 2027",
+      "opis": "Pre-PDW community social in Philadelphia, 31 July 2026, the evening before the Space Economy PDW at AOM 2026."
+    },
+    "contact-team.html": {
+      "tytul": "Contact / Team | Space Economy Conference 2027",
+      "opis": "Conference chair, organising team and contact details for the inaugural Space Economy Conference 2027."
+    },
+    "community-recognition.html": {
+      "tytul": null,
+      "opis": null,
+      "_uwaga": "null = strona ma wlasny <title> i description, skrypt ich nie rusza"
+    }
+  }
+}
